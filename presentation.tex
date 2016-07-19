@@ -1,0 +1,59 @@
+ 
+\documentclass[usenames,dvipsnames]{beamer} 
+\usepackage[english]{babel} 
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{fourier}
+\usepackage{calc}
+\usepackage{fourier}
+\usepackage{mathrsfs}
+\usepackage{amsthm,amsmath,amssymb,amsfonts} 
+\usepackage{braket} 
+\usepackage[compatibility=false]{caption}
+\usepackage{subcaption}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{accents}
+\mode<presentation>{\usetheme{tud}} 
+\hypersetup{colorlinks=true,allcolors=ForestGreen} 
+\title{\parbox{.8\textwidth}{Green's Function Methods for transport calculations involving strong capacitive interactions.}}
+\author{Josko de Boer} 
+\date{July 21, 2016}  
+\renewcommand{\thefootnote}{\Roman{footnote}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Fixing faulty template %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%    In beamer inner theme
+%%%%    there's an add to 
+%%%%    template frametitle
+%%%%    remove it. 
+\setbeamertemplate{frametitle}
+{
+    \begin{beamercolorbox}{frametitle}
+        \insertframetitle
+    \end{beamercolorbox}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% debug settings %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\showboxdepth=\maxdimen
+\showboxbreadth=\maxdimen
+\overfullrule=2cm
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight, clip=true, trim=8cm 4cm 20cm 8cm]{fig/current_map_u0.pdf}}%
+\setbeamertemplate{footline}{\usebeamertemplate*{minimal footline}}
+\frame{\titlepage}
+}
+\input{contents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  BIBLIOGRAPHY    %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[allowframebreaks] 
+    \bibliography{references} 
+\end{frame}%
+%\input{trashed}
+\end{document}

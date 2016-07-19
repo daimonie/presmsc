@@ -78,7 +78,7 @@
 	\tableofcontents[currentsection,currentsubsection]
 \end{frame}
 \section{Theory}
-\ssection{Single-Particle Green's Function}
+\ssection{Green's Functions}
 \begin{frame}
     \frametitle{The Single-Particle Green's Function}
      \begin{itemize}
@@ -133,22 +133,128 @@
         \end{subfigure}
         \caption{The many-body Green's Function is found as a weighted sum of single-particle Green's Functions.} 
     \end{figure} 
-\end{frame}
-\ssection{Many-body Green's Function}
+\end{frame} 
 \ssection{Density Matrix}
-\ssection{Two site model}
+\begin{frame}
+    \frametitle{Density Matrix}
+    \begin{itemize}
+        \item What are the chances for each of the pictures? (many-body states)
+        \item Mathematically, chance is defined as $P_{\lambda}$, e.g. $P_{01}$ for the state with one electron on the right level.
+        \item In equilibrium, the energy of each state determines the chance.
+        \item At low temperature, the state with the lowest energy is occupied.
+        \item Boltzmann $P_\lambda = Z^{-1} \text{exp}\left\{ - \frac{E_\lambda}{k_b T}\right\}$, $Z$ normalisation constant called the partition function.
+        \item However... The molecule is inside the potential difference, and is not in equilibrium.
+        \item What now?
+    \end{itemize} 
+\end{frame}%
+\begin{frame}
+    \frametitle{Non-equilibrium Density Matrix}
+    \begin{itemize}
+        \item Suppose $P_\lambda$ is known for all $\lambda$.
+        \item The states with one electron on the right level are $P_{01}, P_{11}$.
+        \item The expected number of electrons on the right level is $\braket{n_R} = 1 \times P_{01} + 1 \times P_{11}$.
+        \item Matrix notation: \begin{align*}\braket{ \begin{pmatrix} n_L \\ n_R \end{pmatrix}} = \begin{pmatrix} 0 & 0 & 1 & 1 \\ 0 & 1 & 0 & 1\end{pmatrix}\begin{pmatrix} P_{00} \\ P_{01} \\ P_{10} \\ P_{11} \end{pmatrix}\end{align*}
+        \item Left-Hand side can also be found from Green's function $\mathscr{G}^{<}$. (Complicated expression). Requires the vector of probabilities.
+    \end{itemize} 
+\end{frame}%
+\begin{frame}
+    \frametitle{Self-consistent Density Matrix}
+    \begin{itemize} 
+    \item Required: vector of probabilities $\underline{P}$
+    \item $\braket{\underline{n}}$ can be found in two ways.
+    \item $\braket{\underline{n}} = K P$ from the last slide.
+    \item $\braket{\underline{n}} = W(\underline{P})$ via the lesser Green's function $\mathscr{G}^<$. 
+    \item Use a self-consistent scheme to find $\underline{P}$!
+    \item Given some value of $\underline{P}$, find $W(\underline{P}) = \braket{W}$.
+    \item Solve $ K \underline{P} = \braket{W}$ for P.
+    \item However, matrix $K$ is not square. Use minimisation?
+    \end{itemize} 
+\end{frame}%
+\begin{frame}
+    \frametitle{Self-consistent scheme}
+    \begin{enumerate} 
+    \item Initial guess $\underline{P}^0$ as equilibrium (Boltzmann).
+    \item Calculate $W(\underline{P}^0) = \braket{W}^0$.
+    \item Minimise $K \underline{P}^1 = \braket{W}^0$ to find the next-generation $P$.
+    \item Check if $P^1 = P^0$. If not, return to step 2. Else...
+    \item You have found the non-equilibrium $\underline{P}$, which just so happens to be the diagonal of the density-matrix $\braket{\rho}$.
+    \end{enumerate} 
+    
+    Sounds simple. However, takes extremely long to reach step 5. 
+    
+    Because $T\approx 6$K, I have approximated the \emph{non}-equilibrium density matrix as a equilibrium density matrix. 
+\end{frame}% 
 \begin{frame}
     \frametitle{Next}
 	\tableofcontents[currentsection,currentsubsection]
 \end{frame}
 \section{Results}
 \ssection{Transmission}
-\ssection{Coulomb Diamonds}
-\ssection{Experimental Fit}
-\ssection{Non-equilibrium density Matrix}
+\begin{frame}
+    \frametitle{Transmission}
+    \vspace{-3mm}
+    \begin{figure}[!b] 
+        \centering
+        \includegraphics[height=.85\textheight, width=\textwidth,clip=true, trim=0cm 0cm 5cm 2cm]{res/transmap_u1_k2.pdf}
+        \vspace{-6mm}
+        \caption{Spinless versus Spinfull Transmission at certain parameters.}
+    \end{figure} 
+\end{frame}
+\ssection{Coulomb Diamonds I}
+\begin{frame}
+    \frametitle{Coulomb Diamonds}
+    \vspace{-3mm}
+    \begin{figure}[!b] 
+        \centering
+        \includegraphics[height=.85\textheight, width=\textwidth]{res/current_map_diamond_alpha_075.pdf}
+        \vspace{-6mm}
+        \caption{Large Coulomb Diamond, width is $U$.}
+    \end{figure} 
+\end{frame}
+\begin{frame}
+    \frametitle{Coulomb Diamonds II}
+    \vspace{-3mm}
+    \begin{figure}[!b] 
+        \centering
+        \includegraphics[height=.85\textheight, width=\textwidth]{res/current_map_diamond_alpha_025.pdf}
+        \vspace{-6mm}
+        \caption{Thin Coulomb Diamond, height depends on $\alpha$.}
+    \end{figure} 
+\end{frame}
 \begin{frame}
     \frametitle{Next}
 	\tableofcontents[currentsection,currentsubsection]
+\end{frame}
+\ssection{Experimental Fit}
+\begin{frame}
+    \frametitle{Spinless Experimental Fit}
+    \vspace{-3mm}
+    \begin{figure}[!b] 
+        \centering
+        \includegraphics[height=.75\textheight, width=\textwidth, clip=true, trim=6cm 0cm 0cm 0cm]{res/spinless.pdf}
+        \vspace{-6mm}
+        \caption{Spinless experimental fit.}
+    \end{figure} 
+\end{frame}
+\begin{frame}
+    \frametitle{Spinfull Experimental Fit}
+    \vspace{-3mm}
+    \begin{figure}[!b] 
+        \centering
+        \includegraphics[height=.75\textheight, width=\textwidth]{res/spinfull.pdf}
+        \vspace{-6mm}
+        \caption{Spinfull experimental fit.}
+    \end{figure} 
+\end{frame}
+\begin{frame}
+    \frametitle{Self-Consistent Spinless Experimental Fit}
+    \vspace{-3mm}
+    \begin{figure}[!b] 
+        \centering
+        \includegraphics[height=.75\textheight, width=\textwidth]{res/selfconsistent.pdf}
+        \vspace{-6mm}
+        \caption{Spinfull experimental fit.}
+    \end{figure} 
 \end{frame}
 \section{Conclusions}
 \ssection{Summary}

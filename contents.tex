@@ -72,12 +72,32 @@
         \item The current is found by putting blocks of electrons through the transmission graph, and counting how many came out.
         \item Various things haven't been calculated yet.
     \end{itemize} 
-\end{frame}%
+\end{frame}
+\addcontentsline{toc}{subsection}{Motivation}
+\subsection*{Motivation}
+\begin{frame}
+    \frametitle{Motivation}
+    \begin{itemize}
+        \item First focus: Smaller active electronics
+        \item Modern Focus: Wealth of functional molecules $\rightarrow$ wealth of functional nanoscopic devices:
+        \begin{itemize}
+            \item Thermoelectric Transport
+            \item Photoelectric Transport
+            \item Spin Transport
+            \item Quantum Interference
+            \item Mechanical switching
+            \item Electrochemical control
+            \item Vibrational modes
+            \item Electromagnetic background
+        \end{itemize}
+        \item Room temperature nanoscience?
+    \end{itemize}
+\end{frame}
+\section{Theory}
 \begin{frame}
     \frametitle{Next}
 	\tableofcontents[currentsection,currentsubsection]
 \end{frame}
-\section{Theory}
 \ssection{Green's Functions}
 \begin{frame}
     \frametitle{The Single-Particle Green's Function}
@@ -133,8 +153,9 @@
         \end{subfigure}
         \caption{The many-body Green's Function is found as a weighted sum of single-particle Green's Functions.} 
     \end{figure} 
-\end{frame} 
-\ssection{Density Matrix}
+\end{frame}  
+\addcontentsline{toc}{subsection}{Density Matrix}
+\subsection*{Density Matrix}
 \begin{frame}
     \frametitle{Density Matrix}
     \begin{itemize}
@@ -218,9 +239,9 @@
         \caption{Spinless versus Spinfull Transmission at certain parameters.}
     \end{figure} 
 \end{frame}
-\ssection{Coulomb Diamonds I}
+\ssection{Coulomb Diamonds}
 \begin{frame}
-    \frametitle{Coulomb Diamonds}
+    \frametitle{Coulomb Diamonds I}
     \vspace{-3mm}
     \begin{figure}[!b] 
         \centering
@@ -239,11 +260,18 @@
         \caption{Thin Coulomb Diamond, height depends on $\alpha$.}
     \end{figure} 
 \end{frame}
+\addcontentsline{toc}{subsection}{Experimental Fit}
+\subsection*{Experimental Fit}
 \begin{frame}
-    \frametitle{Next}
-	\tableofcontents[currentsection,currentsubsection]
+    \frametitle{Perrin Experiment}
+    \vspace{-3mm}
+    \begin{figure}[!b] 
+        \centering
+        \includegraphics[height=.75\textheight, width=\textwidth, page=4, clip=true, trim=11.5cm 8.5cm 4.5cm 15cm]{nature.pdf}
+        \vspace{-6mm}
+        \caption{Theory versus experiment\cite{perrin}. Theory multiplied by $7.2\times 10^{-5}$.}
+    \end{figure} 
 \end{frame}
-\ssection{Experimental Fit}
 \begin{frame}
     \frametitle{Spinless Experimental Fit}
     \vspace{-3mm}
@@ -259,7 +287,7 @@
     \vspace{-3mm}
     \begin{figure}[!b] 
         \centering
-        \includegraphics[height=.75\textheight, width=\textwidth]{res/spinfull.pdf}
+        \includegraphics[height=.75\textheight, width=\textwidth, clip=true, trim=6cm 0cm 0cm 0cm]{res/spinfull.pdf}
         \vspace{-6mm}
         \caption{Spinfull experimental fit.}
     \end{figure} 
@@ -269,12 +297,106 @@
     \vspace{-3mm}
     \begin{figure}[!b] 
         \centering
-        \includegraphics[height=.75\textheight, width=\textwidth]{res/selfconsistent.pdf}
+        \includegraphics[height=.75\textheight, width=\textwidth, clip=true, trim=6cm 0cm 0cm 0cm]{res/selfconsistent.pdf}
         \vspace{-6mm}
         \caption{Spinfull experimental fit.}
     \end{figure} 
 \end{frame}
 \section{Conclusions}
+\begin{frame}
+    \frametitle{Next}
+	\tableofcontents[currentsection,currentsubsection]
+\end{frame} 
 \ssection{Summary}
-\ssection{Discussion}
-\ssection{Future Outlook}
+\begin{frame}
+    \frametitle{Summary and Discussion}
+    Introduction and Theory:
+    \begin{itemize}
+        \item Molecules have transmission peaks (Analogy: musical notes)
+        \item Can be calculated using non-Equilibrium Green's Function Formalism
+        \item Capacitive interaction can be included
+        \item Leads to many-body Green's Function $\mathscr{G}$
+        \item Including self-consistency equation for non-equilibrium density matrix 
+    \end{itemize}
+    Results:
+    \begin{itemize} 
+        \item Clear many-body behaviour in Transmission.
+        \item Effective Parameters.
+        \item Coulomb Diamonds reproduced.
+        \item Experimental fit with \citet{perrin} greatly improved.
+        \item Self-consistency fit is slightly better qualitatively, promises quantitative as well.
+    \end{itemize}
+\end{frame} 
+\subsection*{Impact}
+\addcontentsline{toc}{subsection}{Impact}
+\begin{frame}
+    \frametitle{Future Outlook} 
+    \begin{itemize}
+    \item Captures systems with:
+        \begin{itemize}
+            \item Complicated charge states
+            \item non-equilibrium density matrix
+            \item higher temperatures
+        \end{itemize}
+    \item e.g. Room-temperature OPE3 (Riccardo Frisenda); equilibrium approximation won't work, needs DFT charge states
+    \item Confirmation theory: Gated systems because $V_g\approx \epsilon_0$ (three-terminal molecular junctions)
+    \item Non-symmetric versions of this molecule (Rectifiers)
+    \item Anything involving capacitive interactions $\ldots$
+    \end{itemize}
+\end{frame}  
+\begin{frame}
+    \frametitle{Fin}
+    I'd like to thank the audience, specifically:
+    \begin{itemize}
+        \item My thesis advisor, Dr. Jos Thijssen
+        \item The other examiners:
+        \begin{itemize}
+            \item Prof. Dr. Herre van der Zant
+            \item Prof. Dr. Yaroslav Blanter
+        \end{itemize}
+        \item The Ph. D. student, Jos\'e Celis Gil
+        \item My girlfriend
+        \item My family
+        \item My friends
+    \end{itemize} 
+\end{frame}
+\section*{Appendix}
+%%%% prepared questions
+\begin{frame}
+    \frametitle{Many-body Green's Function}
+    Capacitive self-energy:
+    \begin{align*}
+    \Sigma^{c} &= \sum_k U^k n_k
+    \label{eq:selfenergycapacitive}.
+    \end{align*} Taylor expansion on $G^+  = \left[ A^{-1} - B_1 n_1 - B_2 n_2 \right]^{-1}$, group number operators:
+    \begin{align*}
+    G^+ &= A + A\left[B_1 n_1 + B_2 n_2\right]A + A\left[B_1 n_1 + B_2 n_2\right]  A\left[B_1 n_1 + B_2 n_2\right]  A + \ldots \\
+    &= (1-n_1)(1-n_2) A + n_1 (1-n_2)\left[A + AB_1 A + AB_1AB_1A + \ldots \right] + \\
+    &\quad (1-n_1)n_2 \left[ A + AB_2A + AB_2AB_2A + \ldots \right] +\\
+    &\quad n_1 n_2 \left[ A + A\left[B_1 + B_2\right]A+ A\left[B_1 + B_2\right]A\left[B_1 + B_2\right]A + \ldots\right] \\
+    &= (1-n_1)(1-n_2) A + n_1 (1-n_2) \left[ A^{-1} - B_1\right]^{-1} + \\&\quad(1-n_1) n_2 \left[ A^{-1} - B_2\right]^{-1} +\\&\quad n_1 n_2 \left[A^{-1} - B_1 - B_2 \right]^{-1}.
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+    \frametitle{DFT charge states}
+    \vspace{-3mm}
+\begin{align*}
+\mathscr{G}^{\kappa\pm}_{ij} (t,t') &= \mp \frac{\imath}{\hbar} \theta(\pm(t-t'))\left\{ n_\kappa d_i(t), d_j^\dagger (t')\right\}
+\end{align*}Cut off tunnel couplings after first order. Then, the many-body Green's function is:
+\begin{align*}
+\mathscr{G}^{\kappa\pm} &= \left[ \epsilon - \epsilon_i - \tau - \Sigma^c - \Sigma^\pm\right]^{-1} n_\kappa
+\end{align*}
+I can then find the expectation value of the many-body Green's Function :
+\begin{align*}
+\mathscr{G}^{\kappa\pm} &= \sum_{\lambda\supseteq\kappa} P_{\lambda\lambda} G^{\lambda\pm},
+\end{align*}
+\begin{align*}
+G^{\lambda\pm} &= \left[\mathscr{E} - \mu^\lambda - \tau - \Sigma^\pm \right]^{-1},
+\end{align*} 
+\begin{align*}
+\mu^\lambda_{ij} &= \delta_{ij} \left( \epsilon_i + \sum_{p\in\lambda} U_{ip} \right)
+\end{align*}
+
+$H^\kappa = \mu^\kappa + \tau$ effective single-particle $H$ of in many-body state $\kappa$.
+\end{frame}
